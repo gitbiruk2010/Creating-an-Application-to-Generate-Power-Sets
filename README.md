@@ -1,6 +1,10 @@
 # Power Set Generator
 
 This application generates the power set of a given set. The user can input a set, and the application will display the power set.
+## Screenshots
+![image](https://github.com/user-attachments/assets/0592c101-949a-4c90-b3de-0175bf3ddc2b)
+
+![image](https://github.com/user-attachments/assets/c950b400-cf02-4a3f-ba79-339755e1f843)
 
 ## Directory Structure
 
