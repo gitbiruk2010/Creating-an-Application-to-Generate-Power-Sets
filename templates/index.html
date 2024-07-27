@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Set Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Add Font Awesome for the home icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Home icon that refreshes the page -->
+        <a href="/" class="home-icon"><i class="fas fa-home"></i></a>
+        <h1>Power Set Generator</h1>
+        <form method="POST">
+            <label for="input_set">Enter a set (comma separated values):</label>
+            <input type="text" id="input_set" name="input_set" required>
+            <button type="submit">Generate Power Set</button>
+        </form>
+        {% if result is not none %}
+            <h2>Power Set of {{ input_set }}:</h2>
+            <ul>
+                {% for subset in result %}
+                    <li>{{ '[' + ', '.join(subset) + ']' if subset else '[]' }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
